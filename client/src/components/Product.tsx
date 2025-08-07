@@ -47,7 +47,8 @@ const products = [
     id: 8,
     name: "Débardeur basique",
     price: "12€",
-    image: "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg",
+    image:
+      "https://plus.unsplash.com/premium_photo-1675186049409-f9f8f60ebb5e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
