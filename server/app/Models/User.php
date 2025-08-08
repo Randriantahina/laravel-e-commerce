@@ -7,11 +7,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use App\Models\Order;
 
 class User extends Authenticatable implements JWTSubject
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -33,6 +35,10 @@ class User extends Authenticatable implements JWTSubject
         'password',
         'remember_token',
     ];
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 
     /**
      * Get the attributes that should be cast.
